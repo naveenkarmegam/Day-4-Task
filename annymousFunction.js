@@ -34,11 +34,15 @@ console.log(titleCaps(`guvi geeks network pvt ltd`));
 //ananymous function
 const primeNumbers = function (index) {
     const isPrime = function (number) {
+        if(number === 1 || number === 0) {
+            return false;
+        }else { 
         for(let i = 2 ; i < number; i++) {
             if(number % i == 0 )
                 return false;
         }
         return true
+        }
     }
     let result = []
     for(let value of index) {
@@ -49,7 +53,7 @@ const primeNumbers = function (index) {
     }
     return result;
 }
-console.log(primeNumbers([4,5,6,7,3,33]));
+console.log(primeNumbers([1,2,3,4,5,6,7,0]));
 
 // e. return all the palindromes in an array
 //IIFE - functions
