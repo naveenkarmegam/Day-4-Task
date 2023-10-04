@@ -122,10 +122,10 @@ console.log(checkSize([1,2,3],[3,4,5]))
 const duplicates = function (strings) {
     let original = []
     for(let str of strings ) {
-        if(original.includes(str))
-            continue;
-        else
+        if(!original.includes(str))
             original.push(str)
+        //     continue;
+        // else
     }
     return original
 }
